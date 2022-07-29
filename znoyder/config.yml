@@ -283,6 +283,10 @@ override:
     'osp-17.0':
       'osp-rpm-py39':
         voting: false
+        vars:
+          extra_commands:
+            - 'dnf install -y openstack-dashboard'
+            - 'ln -s /usr/share/openstack-dashboard/openstack_dashboard /usr/lib/python3.9/site-packages/' 
 
   'keystone':  # rhbz#2052499
     'osp-17.0':
@@ -308,6 +312,10 @@ override:
     'osp-17.0':
       'osp-rpm-py39':
         voting: false
+        vars:
+          extra_commands:
+            - 'dnf install -y openstack-dashboard'
+            - 'ln -s /usr/share/openstack-dashboard/openstack_dashboard /usr/lib/python3.9/site-packages/' 
 
   'networking-bgpvpn':
     'osp-17.0':
@@ -343,6 +351,10 @@ override:
     'osp-17.0':
       'osp-rpm-py39':
         voting: false
+        vars:
+          extra_commands:
+            - 'dnf install -y openstack-dashboard'
+            - 'ln -s /usr/share/openstack-dashboard/openstack_dashboard /usr/lib/python3.9/site-packages/' 
 
   'openstack-ec2-api':
     'osp-17.0':
@@ -358,6 +370,10 @@ override:
     'osp-17.0':
       'osp-rpm-py39':
         voting: false
+        vars:
+          extra_commands:
+            - 'dnf install -y openstack-dashboard'
+            - 'ln -s /usr/share/openstack-dashboard/openstack_dashboard /usr/lib/python3.9/site-packages/' 
 
   'openstack-ironic-inspector':
     'osp-17.0':
@@ -385,6 +401,10 @@ override:
     'osp-17.0':
       'osp-rpm-py39':
         voting: false
+        vars:
+          extra_commands:
+            - 'dnf install -y openstack-dashboard'
+            - 'ln -s /usr/share/openstack-dashboard/openstack_dashboard /usr/lib/python3.9/site-packages/' 
 
   'openstack-tripleo-common':
     'osp-17.0':
@@ -490,7 +510,7 @@ override:
         vars:
           extra_commands:
             - 'dnf install -y python3-coverage python3-stestr python3-requests-mock openstack-dashboard'
-            - 'ln -s /usr/share/openstack-dashboard/ /usr/lib/python3.9/site-packages/'
+            - 'ln -s /usr/share/openstack-dashboard/openstack_dashboard /usr/lib/python3.9/site-packages/' 
 
   'python-castellan':
     'osp-17.0':
